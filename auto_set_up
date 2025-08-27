@@ -1,0 +1,48 @@
+#!/bin/bash
+set -e
+if [ "$(id -u)" = "0" ]; then
+    echo "run this script as normal user because i need to add you to sudo group"
+    echo "run apt install sudo as root can install sudo"
+    echo "run usermod -aG sudo username as root can add user to sudo"
+    exit 1
+fi
+sudo usermod -aG sudo $(whoami)
+sudo apt update
+sudo  apt install git
+cd ~
+git clone https://github.com/zixgggg/my_.fonts.git
+git clone https://github.com/zixgggg/my_.config.git
+git clone https://github.com/zixgggg/my_.power.git
+sudo apt install xorg
+sudo apt install i3
+sudo apt install i3blocks
+sudo apt install network-manager
+systemctl status NetworkManager
+sudo systemctl enable --now NetworkManager
+systemctl status NetworkManager
+sudo apt -y install pulseaudio
+sudo apt -y install pavucontrol
+sudo apt -y install fonts-noto-cjk
+sudo apt -y install fonts-noto-color-emoji
+sudo apt -y install fcitx5
+sudo apt -y install power-profiles-daemon
+sudo apt -y install acpi
+sudo apt -y install brightnessctl
+sudo apt -y install dunst
+sudo apt -y install libnotify-bin
+sudo apt -y install blueman
+sudo apt -y install maim
+sudo apt -y install flameshot
+sudo apt -y install feh
+sudo apt -y install nsxiv
+sudo apt -y install mpv
+sudo apt -y install baobab
+sudo apt -y install fdisk
+sudo apt -y install lsblk
+sudo apt -y install rofi
+sudo apt -y install btop
+sudo apt -y install fastfetch
+#sudo apt install lightdm
+#sudo apt install slick-greeter
+sudo apt -y purge ifupdown
+echo "all you need to do is reboot(systemctl reboot)"
