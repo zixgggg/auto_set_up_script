@@ -1,12 +1,7 @@
 #!/bin/bash
 set -e
-if [ "$(id -u)" = "0" ]; then
-    echo "run this script as normal user because i need to add you to sudo group"
-    echo "run apt install sudo as root can install sudo"
-    echo "run usermod -aG sudo username as root can add user to sudo"
-    exit 1
-fi
-sudo usermod -aG sudo $(whoami)
+echo "run apt install sudo as root to install sudo"
+echo "run usermod -aG sudo username as root to add user to sudo"
 sudo apt update
 sudo  apt install git
 cd ~
