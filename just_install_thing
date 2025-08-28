@@ -1,0 +1,32 @@
+sudo apt install xorg
+sudo apt install i3
+sudo apt install i3blocks
+sudo apt install network-manager
+systemctl status NetworkManager
+sudo systemctl enable --now NetworkManager
+systemctl status NetworkManager
+sudo apt -y install pulseaudio
+sudo apt -y install pavucontrol
+sudo apt -y install fonts-noto-cjk
+sudo apt -y install fonts-noto-color-emoji
+sudo apt -y install fcitx5
+sudo apt -y install power-profiles-daemon
+sudo apt -y install acpi
+sudo apt -y install brightnessctl
+sudo apt -y install dunst
+sudo apt -y install libnotify-bin
+sudo apt -y install blueman
+sudo apt -y install maim
+sudo apt -y install flameshot
+sudo apt -y install feh
+sudo apt -y install nsxiv
+sudo apt -y install mpv
+sudo apt -y install baobab
+sudo apt -y install fdisk
+sudo apt -y install lsblk
+sudo apt -y install rofi
+sudo apt -y install btop
+sudo apt -y install fastfetch
+#sudo apt install lightdm
+#sudo apt install slick-greeter
+sudo apt -y purge ifupdown
