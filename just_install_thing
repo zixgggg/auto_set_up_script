@@ -29,4 +29,4 @@ sudo apt -y install btop
 sudo apt -y install fastfetch
 #sudo apt install lightdm
 #sudo apt install slick-greeter
-sudo apt -y purge ifupdown
+#sudo apt -y purge ifupdown
